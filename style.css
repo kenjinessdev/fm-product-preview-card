@@ -1,0 +1,146 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --green-500: #3c8067;
+  --green-700: #1b4133;
+
+  --black: #1c232b;
+  --grey: #6c7289;
+  --cream: #f2ebe3;
+  --white: #ffffff;
+
+  --primary-font-family: "Fraunces", sans-serif;
+  --secondary-font-family: "Montserrat", sans-serif;
+
+  --font-500: 500;
+  --font-700: 700;
+}
+
+html,
+body {
+  background-color: var(--cream);
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+}
+
+main {
+  width: 600px;
+  height: 450px;
+  background-color: var(--white);
+  border-radius: 12px;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+section {
+  display: flex;
+}
+
+section.left {
+  height: 100%;
+}
+
+section.left img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+section.right {
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+#product-class {
+  font-family: var(--secondary-font-family);
+  color: var(--grey);
+  font-size: 12px;
+  letter-spacing: 5px;
+}
+
+h1 {
+  font-family: var(--primary-font-family);
+  font-weight: var(--font-700);
+  font-size: 32px;
+  line-height: 1;
+  color: var(--black);
+}
+
+h3 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: var(--font-400);
+  color: var(--grey);
+  font-size: 12px;
+  letter-spacing: 5px;
+}
+
+p {
+  font-family: var(--secondary-font-family);
+  font-weight: var(--font-500);
+  color: var(--grey);
+  line-height: 1.6;
+}
+
+.price-tag {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.price-tag h1 {
+  color: var(--green-500);
+}
+
+.price-tag s {
+  color: var(--grey);
+  font-family: var(--secondary-font-family);
+}
+
+button {
+  background-color: var(--green-500);
+  color: var(--white);
+  font-family: var(--secondary-font-family);
+  border: none;
+  padding: 15px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  font-weight: var(--font-700);
+}
+
+button:hover {
+  background-color: var(--green-700);
+}
+
+button img {
+  width: 15px;
+  height: 15px;
+}
+
+@media (max-width: 768px) {
+  main {
+    grid-template-columns: 1fr;
+    width: calc(100% - 24vw);
+    height: auto;
+  }
+
+  .product-image {
+    content: url("images/image-product-mobile.jpg");
+  }
+}
